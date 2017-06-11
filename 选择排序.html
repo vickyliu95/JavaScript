@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择排序</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//定义一个选择排序算法
+	//冒泡、插入、选择；只适合小数据(千)排序
+    function selectionSort(arr){
+     var min;//最小项索引
+     var temp;//中间边个两
+     for(var i = 0; i < arr.length-1; i++){
+     	//1\把数组第一项看作最小
+     	 min=i;
+     	//2、除了起始比较项，后面一一比较
+     	//这是arr.length,不是arr.length-i，如果是后者，右边末尾第二项无法参加排序
+     	for(var j = i+1; j < arr.length; j++){
+     		if(arr[j]<arr[min]){
+               min=j;   
+             }  
+            }
+             temp=arr[i];
+             arr[i]=arr[min];
+             arr[min]=temp; //将最小项移动到最左边
+           }
+          alert(arr);
+        }
+    // var arr1=[99,33,26,47,52,69];
+     var arr1=[5,5,3]
+    selectionSort(arr1);
+	</script>
+</body>
+</html>
