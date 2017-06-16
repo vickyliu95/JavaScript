@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+//封装函数；
+//自动返回随机数
+//function（80，40）
+ function random1(max,min){
+	return parseInt(Math.random()*(max-min)+min);
+    }
+ console.log(random1(80,40))
+//自定义函数，能按照任意位数，四舍五入555.555，2=555.56
+ function round1(a,b){
+ 	   return Math.round(a*Math.pow(10,b))/Math.pow(10,b)
+       }
+  alert(round1(2.3658,4)) 
+</script>
+</body>
+</html>
