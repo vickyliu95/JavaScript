@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业1</title>
+</head>
+<body>
+<script type="text/javascript">
+//模拟输入验证码,程序中固定保存一个验证码,要求由大写\小写字母加上数字组成. 4位.用户反复输入验证码, 页面显示登录成功,不区分大小写
+     var code=/9Fa5/i;
+     var input='';
+     do{
+         input=prompt('请输入验证码'); 
+        }while(input!=code)
+       alert('登录成功！')
+
+</script>	
+</body>
+</html>

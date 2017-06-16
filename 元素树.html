@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+    window.onload=function () {
+    	//元素树
+    	//parentElementNode父亲元素节点
+    	//children所有子元素集合
+    	//firstElementChild获取第一个子元素
+    	//lastElementChild获取最后一个子元素
+    	//previousElementSibling上一个兄弟元素
+    	//nextElementSibling下一个兄弟元素
+    	console.log(document.body.children);
+    	console.log(document.body.firstElementChild);
+    	console.log(document.body.lastElementChild);
+    	var div1=document.getElementById('mydiv');
+    	console.log(div1.nextElementSibling);
+    }
+	</script>
+</head>
+<body>
+ <div id="mydiv">
+  <h1>这是H1</h1>
+ </div>
+ <span>这是span</span>
+</body>
+</html>

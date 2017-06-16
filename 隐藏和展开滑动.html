@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隐藏和展开列表</title>
+	<style type="text/css">
+    div{
+    	float: left;
+    	height: 100px;
+    	line-height: 100px;
+     }
+#d1,#d3{
+	 background-color: #ccff00;
+  }
+#d1{
+	width: 100px;
+	overflow: hidden;
+	transition: width 0.5s;
+   }
+ #d2{
+	 background-color: #ffcc00;
+   }
+	</style>
+</head>
+<body>
+	<div id="d1">树形列表</div>
+	<div id="d2" onclick="toggle(this)">&lt;&lt;</div>
+	<div id="d3">主体内容</div>
+		 <script type="text/javascript">
+	       function toggle(div2){
+	       	if(div2.innerHTML=="&lt;&lt;"){
+	       		div2.innerHTML="&gt;&gt;";
+	       		div2.previousElementSibling.style.width="0px";
+	       	}else{
+	       		 div2.innerHTML="&lt;&lt";
+	       		 div2.previousElementSibling.style.width="100px";
+	       	     }
+	       }
+		</script>
+</body>
+</html>

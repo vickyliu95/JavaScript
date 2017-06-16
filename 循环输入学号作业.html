@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业1</title>
+</head>
+<body>
+<script type="text/javascript">
+var input;
+        var studentsArr=[];
+          do{
+            var input=prompt('请输入学号')
+           
+           if(input!='exit'){
+            studentsArr[studentsArr.length]=input;
+                     }
+           }while(input!='exit')
+       for(var i in studentsArr){
+         console.log(studentsArr[i]);
+          }
+     for( var j=studentsArr.length-1;j>=0;j--){
+             console.log(studentsArr[j]);
+          }
+    </script>	
+</body>
+</html>
