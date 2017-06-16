@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.2.0.js"></script>
+	<style type="text/css">
+     li{
+     	float: left;
+     	list-style-type: none;
+     	font-size: 12px;
+     	width: 150px;
+     }
+   img{
+   	margin:0 auto;
+   	display: block;
+   }
+   .change{
+   	background: red;
+   }  
+	</style>
+</head>
+<body>
+<input type="text" /><button>搜索</button>
+  <ul>
+	<li>
+		<img src="images/1.jpg"/><br />
+		<a href="#">罗蒙男士纯棉短袖衬衫</a><br />
+		<span>￥159.00</span>
+	</li>
+	<li> 
+	  <img src="images/2.jpg"/><br />
+	  <a href="#">思莱德SELECTED含亚麻修身男士衬衫</a><br />
+	  <span>￥159.00</span>
+	</li>
+	<li>
+       <img src="images/3.jpg"/><br />
+       <a href="#">TOMMY HILFIGER 品牌简约经典款短袖POLO衫</a><br />
+       <span>￥159.00</span>
+     </li>
+	 <li>
+	   <img src="images/4.jpg"/><br />
+	    <a href="#">唐狮 男基本牛仔双袋休闲长袖衬衫</a><br />
+	    <span>￥159.00</span></li>
+  </ul>
+<script type="text/javascript">
+//1.添加按钮点击事件
+$('button').click(function(){
+  //2.拿到搜索框里的内容
+  var txt=$('input').val();
+  //3.拿到所有的a标签里的文字
+  var $links=$('a');
+ 
+  for(var i=0;i<$links.length;i++){
+  	//indexOf()可以返回某个指定的字符串值在字符串中首次出现的位置
+  	//stringobj.indexOf(searchValue)
+  	//stringobj字符串中从头到尾检索是否含有子字符串(searchValue)，如果有，返回index值，如果没有，返回-1；
+  	//today is Friday.indexOf(t);//0
+  	if($($links[i]).text().toLowerCase().indexOf(txt.toLowerCase())!=-1){
+  		//清除类
+  		$links.parent().removeClass('change');
+  		//添加类
+  	   $($links[i]).parent().addClass('change');
+  	}
+  	if(txt.toLowerCase()==''){
+		$($links[i]).parent().removeClass('change');
+	}
+  }
+    
+});
+
+</script>	
+</body>
+</html>
