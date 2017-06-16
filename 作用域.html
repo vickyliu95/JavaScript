@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作用域</title>
+</head>
+<body>
+<script type="text/javascript">
+// var n1;
+// console.log(n1);//undefined
+//  n1=0;
+// console.log(n1)//0
+//  var cha;  
+// //定义函数
+// function sum1(a,b) {
+// //函数里定义
+// //局部变量
+// 	// var sum=a+b;
+// 	// 在函数里不用var，直接使用变量，那么这个变量是全局变量，不推荐使用
+// 	 sum=a+b;
+// //全局变量，哪里都能用
+// 	cha=a-b;
+// 	console.log('函数里'sum);
+//      }
+//  sum1(4,5);//9
+//  //sum is not defined,函数里定义的函数外不能用
+//  console.log('函数外：'+sum)
+//  console.log('函数外：'+cha)//-1
+
+// function add2(a,b){
+// 	//函数作用域，仅在函数里有用
+// 	  function cha(b,c){
+// 	 	  var cha1=b-c;
+// 	 	  console.log(cha1);
+// 	      }
+// 	var b1=10;
+// 	var c1=5;
+// 	cha(b1,c1) 
+//   }
+// add2(1,2)
+// cha(20,10)//脚本错误
+
+
+
+var n=100;
+function fun(n){
+	 n-=10;
+	 console.log('函数里:'+n);//90
+       }
+fun(n)
+console.log('函数外:'+n);//100
+
+
+
+
+
+
+
+
+
+</script>	
+</body>
+</html>
