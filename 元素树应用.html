@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+    <script type="text/javascript">
+  window.onload=function(){
+    	//元素树   
+      //定义数组，存放节点内容
+      var tabs=[];
+      function getChildren (parent) {
+      console.log(tabs.join("")+"|-"+parent.nodeName);
+      var tabschildren=parent.children;
+         if (tabschildren) {
+         	tabs.push("\t");
+          	for(var i = 0; i<tabschildren.length; i++){
+          		//以当前元素为父元素，再次调用getChildren函数
+          		//arguments：在函数调用时，会自动在该函数内部生成明为arguments的影厂对象，这个对象类似于数组，但又不是数组。可以使用[]获取函数调用时传递的实参
+          		//callee当函数被调用时，arguments。callee对象指向自己，也就是自己对自己引用
+          		arguments.callee(tabschildren[i])
+       		
+         	    }
+         	tabs.pop();
+         } 
+         }
+         //调用函数
+       getChildren(document);
+   }
+   
+    </script>
+</head>
+<body> 
+	<span calss="msg">Hello videos</span>
+	<ul id="u1">
+		<li>电影</li>
+		<li>综艺</li>
+		<ul>
+			<li>王牌王牌</li>
+			<li>极限挑战</li>
+			<li>欢乐喜剧人</li>
+		</ul>
+		<li>三生三世</li>
+	</ul>
+	<!-- 给出一个任意父节点，显示父节点及其子节点的内容，如果元素节点，输出node Name，否则输出nodeValue -->
+</body>
+</html>

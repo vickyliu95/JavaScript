@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取原型链</title>
+</head>
+<body>
+ <div id=d1>aaa</div>   
+ <span id="s1">hello</span>
+ <!-- 这是注释 -->
+<script type="text/javascript">
+function printProto(obj){
+	//获取对象原型
+	while(obj=Object.getPrototypeOf(obj)){
+		console.log(obj)
+	}
+	console.log('----------------------------------------')
+}
+//只有元素节点有attribute与inner HTML
+//元素节点getAttribute
+//setAttribute
+//Attributes()属性集合
+//hasAttribute（）查看元素是否具有的一些属性
+//removeAttribute移除属性
+ // HTMLElement.Prototype>Element.Prototype >Node.Prototype>EventTarget.Prototype
+
+// printProto(document)
+printProto(document.getElementById('d1'));
+</script>
+
+</body>
+</html>
