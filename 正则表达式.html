@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+	var string1='hello';
+	//正则表达式,直接量
+    var pattearn= /hello/igm;
+    //i=ignoreCase()忽略大小写
+     //g=global:全局，字符串不知道出现多少个和正则表达式相关的子字符串
+     //multiline 多行
+     //使用new关键字创建正则表达式
+    var pattearn1=new RegExp('hello');
+    // test（）验证相关正则表达式的函数
+    console.log(pattearn.test('hello'));//ture
+    console.log(pattearn.test('abchello'));//ture,关键字出现，默认匹配
+     console.log(pattearn.test('helloabc'));//ture,关键字出现，默认匹配
+    console.log(pattearn.test('heabcllo'));//false,破坏了关键字的完整度
+    //false,破坏了关键字的完整度，加上i为ture
+    console.log(pattearn.test('hellO'));
+    console.log(pattearn.test('helalo hello'));//ture，检测到有关键字
+     console.log('全局global'+pattearn.global);//ture
+     console.log('忽略大小写'+pattearn.ignoreCase);//ture
+      console.log('忽略大小写multiline'+pattearn.multiline);
+      console.log('source'+pattearn.source);//hello
+      console.log('lastIndex'+pattearn.lastIndex);
+      pattearn.lastIndex=5;
+      console.log('lastIndex'+pattearn.lastIndex);//12,上次匹配的最后一个字符
+      console.log('$1'+pattearn.$1);
+//只读属性ignoreCase() global multiline 
+//source（只读），正则表达式所使用的文本
+//lastIndex:上次匹配的索引，不只读，可以读写，可以赋值
+//$1...$9全局属性，代表最近一次搜索某个子表达式所匹配的文本
+
+	</script>
+</body>
+</html>
