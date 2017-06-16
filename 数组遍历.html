@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="tom">
+	<title>数组</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//设置数组元素SET
+   //  var scores=[95,88,100];
+   //  scores[2]=98;//将数组第三个元素的值由100改成98
+   //  console.log(scores[2]);
+   //  scores[3]=75;//在数组尾部加上新元素
+   //  console.log(scores[1]);//获取数组元素值GET
+   //  console.log(scores);
+   //  //3、数组长度(scores.length)
+   //  //4、遍历数组
+   //  // //遍历数组顺序 正序
+   //  // for( var i=0;i<=scores.length-1;i++){
+   //  // 	    scores[i]-=10;
+   //  //         console.log(scores[i]);
+   //  //         }
+   //  //遍历数组顺序 倒序
+   //  //在删除数组元素的操作的时候一定用倒序        
+   // // for( var i=scores.length-1;i>=0;i--){
+   // //          console.log(scores[i]);
+   // //          }
+   // //遍历数组顺序 跳序
+   //   // for( var i=0;i<=scores.length-1;i+=2){
+   //   //        console.log(scores[i]);
+   //   //        }
+   //   var studentArr=[];
+   //   studentArr['cjb']='chenjinbo';
+   //   studentArr['dw']='dengwei';
+   //    studentArr['fz']='ceo';
+   //   //使用for in遍历数组
+   //   //遍历数组的顺序是正序
+   //    for(var i in studentArr){
+   //    	 console.log(studentArr[i]);
+   //       }
+   //  //遍历数组索引数组
+   //        for(var i in scores){
+   //    	 console.log(scores[i]);
+   //       }
+   //信息录入系统，不停输入学员学号，直到输入exit停止，保存在一个数组中，控制台输出所有的元素（for....in 正续 for 倒序）
+        var input;
+        var studentsArr=[];
+          do{
+          	var input=prompt('请输入学号')
+           //保存在数组中
+           if(input!='exit'){
+            studentsArr[studentsArr.length]=input;
+                     }
+           }while(input!='exit')
+       for(var i in studentsArr){
+     	   console.log(studentsArr[i]);
+          }
+     for( var j=studentsArr.length-1;j>=0;j--){
+             console.log(studentsArr[j]);
+          }
+ 
+   
+             
+	</script>
+
+
+
+</body>
+</html>

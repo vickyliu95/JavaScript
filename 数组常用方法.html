@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>常用方法</title>
+</head>
+<body>
+  <script type="text/javascript">
+  //定义数组
+  //获取数组字符串
+  var arr1=[1234,2645,264,'hello','js']
+  console.log(arr1)//Array[3]
+  //转变为字符串
+  console.log(arr1.toString())
+  console.log(arr1.join(" "))//去掉逗号,更改连接方式
+//连接数组
+  var arr2=[80,75,63];
+  var arr3=[87,65,78];
+  var arr5=[34,45,67,89];
+  //连接两个数组，谁在前，就先显示谁
+  //可以在后面加入新的元素
+   var arr4=arr2.concat(arr3,arr5,50,60);
+   console.log(arr4);
+   //获取子数组
+   var arr6=[10,20,30,40,50,60];
+   // var arr7=arr6.slice(0,4)//10，20，30，40最后一个取不到
+   // console.log(arr7);
+   //  var arr8=arr6.slice(-4,-2);//30，40第一个取不到
+   // var arr8=arr6.slice(-2,-4);//错误写法，取不到
+   // console.log(arr8);//30,40
+   // var arr10=arr6.splice(2,4);//起始下标，取出个数
+   //  console.log(arr10);
+    // var arr11=arr6.splice(2,1,30,40);
+    //  console.log(arr11);//30
+    //  console.log(arr6);//将取出的30换成30，40
+      arr6.reverse();
+      console.log(arr6)
+  </script>	
+</body>
+</html>

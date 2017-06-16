@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<img  id="img1" src="images/a.jpg" alt="加载">AAAAA
+<div id="d1">aadd</div>
+<script type="text/javascript">
+//只有元素节点有attribute与inner HTML
+//元素节点getAttribute
+//setAttribute
+//Attributes()属性集合
+//hasAttribute（）查看元素是否具有的一些属性
+//removeAttribute移除属性
+var img1=document.querySelector('img');
+console.log(img1.getAttribute('src'));//获取
+//设置
+img1.setAttribute('src','images/b.jpg');
+//attributes()所有的属性
+console.log(img1.attributes);
+//name属性
+console.log(img1.hasAttribute('name'));
+//remove
+img1.removeAttribute('alt');
+console.log(img1.attributes);
+
+var div1=document.getElementById('d1');
+// console.log(d1.innerHTML);
+//元素对象里的内容
+  d1.innerHTML='<span>abc<span>';//作为元素对象里的内容
+console.log(div1.innerHTML);
+// innerHTML
+ d1.textContent='<span>abc<span>';//作为文本
+
+</script>	
+</body>
+</html>

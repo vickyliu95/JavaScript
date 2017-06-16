@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组</title>
+</head>
+<body>
+	<script type="text/javascript">
+//1、[]直接量，直接定义
+//定义一个数组，有四个元素，元素间用逗号隔开
+       var arr1=[20,21,22,20];
+//定义一个不包含任何元素的数组
+       var arr2=[];
+//2、使用array关键字（）
+//定义一个数组，包含俩个字符串元素
+      var arr3= new Array('Tom','lilei');
+//定义一个空数组；
+      var arr4=new Array();
+//注意：
+//1、使用直接连，里面存放一个数字时添加元素，不是当以数组大小
+//2、使用Array,里面存放一个数字是指数组长度、
+      var arr5=[3,5,9];
+//长度为3,三个值都为undefined
+      var arr6=new Array(3);
+      console.log(arr5[2]);
+
+//初始化数组
+var arr7= new Array('Tom','lilei');
+  var arr8=['tom','lilei'];
+  //先定义空数组，再添加元素
+  var empArr=[];
+   empArr[0]='HanMeiMei';
+   empArr[1]='lily'; 
+   //定义数组时已经初始化了
+   //混合数组
+   var mixedArr=new Array();
+   mixedArr[0]='三国演义';
+   mixedArr[1]=195;
+   mixedArr[2]='caocao';
+   mixedArr[3]=true;
+
+  //出现了字符串索引，关联数组
+   mixedArr['aaa']='abc'
+    mixedArr[4]=666;
+   //数组长度
+   //下标都为数字，叫做索引数组
+   console.log(mixedArr.length);
+   // console.log(mixedArr['aaa']);
+   console.log(mixedArr)
+	</script>
+
+</body>
+</html>

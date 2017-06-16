@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业2</title>
+</head>
+<body>
+<script type="text/javascript">
+//使用获取字符串方法,将数组转变为20*30*40*50*60;
+   var arr1=[20,30,40,50,60];
+   console.log(arr1.toString());
+    console.log(arr1.join("*"));
+  //使用连接数组方法 , 连接数组[70,80,90]
+	  var arr2=[70,80,90]
+	  var arr3=arr1.concat(arr2);
+	   console.log(arr3);
+	  // 使用slice()方法,获取数组[30,40,50];
+	  var arr4=arr1.slice(1,4);
+      console.log(arr4);
+   //使用splice()方法,获取数组[50,60];
+     var arr5=arr1.splice(3,2);//起始下标，取出个数
+     console.log(arr5); 
+     //使用splice()方法,在数组30后面添加元素35,37,33,34
+     var arr6=arr1.splice(1,1,35,37,33,34);
+     console.log(arr1);
+     // 倒转数组中的顺序
+      arr1.reverse();
+      console.log(arr1);
+      // 使用sort()排序,对数组中元素排序
+      arr1.sort();
+     console.log(arr1);
+     // 使用数组入栈方法,在末尾添加100,120两个元素  
+       var r=arr1.push(100,120);
+        console.log(arr1); 
+       // 使用数组头部添加元素方法,在数组头部添加-20,-10元素
+        var i=arr1.unshift(-20,-10);  
+        console.log(arr1);   
+    </script>	
+</body>
+</html>
