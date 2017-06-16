@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡</title>
+	<style type="text/css">
+    button{
+    	 width: 60px;
+         height: 30px;}
+    div{
+  	  width: 200px;
+      height: 200px;
+      border: 1px solid #000;
+      display: none;
+      }
+   .btn{
+   	 color: #fff;
+   	 background: #0f0;
+   }
+	</style>
+	<script >
+      window.onload=function(){
+      	//获取所有页面上的按钮放进oBtn这个数组里
+   	  var oBtn=document.getElementsByTagName('button');
+   	  //获取所有页面上的div放进oDiv这个数组里
+   	   var oDiv=document.getElementsByTagName('div');
+   	    for(var i=0;i<oBtn.length;i++){
+				 oBtn[i].index=i;
+				 oBtn[i].onclick=function(){
+					for(var i=0;i<oBtn.length;i++){
+						oBtn[i].className='';
+						oDiv[i].style.display='none';
+					    }
+					this.className='btn';
+					oDiv[this.index].style.display='block';
+				}
+			}
+
+       }
+
+	</script>
+</head>
+<body>
+	<button class="btn">1</button>
+	<button>2</button>
+	<button>3</button>
+	<button>4</button>
+	<button>5</button>
+	<div style="display: block;">1r3r1</div>
+	<div>223323</div>
+	<div>33234234</div>
+	<div>44345324</div>
+	<div>52re2r5</div>
+</body>
+</html>

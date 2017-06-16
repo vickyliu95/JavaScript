@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//定义一个函数
+      function printHello(){
+      	console.log('hello');
+      	console.log('world');
+      	// return true;
+       }
+       printHello()
+      //  //调用函数
+      //  var result=printHello();
+      //  console.log(result);
+       //有参数的函数
+       //参数列表由多个参数，有逗号隔开
+       //形式上的参数，简称形参
+      //  function login(username,password){
+      //     console.log('用户名：'+username);//用户名：Tom
+      //     console.log('密码：'+password);//密码：123456
+      //    }
+      // //调用函数
+      // //按照参数列表形式，添加参数
+      // //实际参数，简称实参
+      // //实际调用是，实参顺序要和形参顺序相对应
+      //     login('Tom','123456');//正确写法
+      //     login('123456','Tom');//相反的，错误写法
+         //构造只有一个参数的函数
+        function print(msg){
+        	console.log(msg);
+        	console.log(msg);
+        	console.log(msg);
+        	console.log(msg);
+        	console.log(msg);
+          }
+        //调用函数
+      print('hello');
+    //实现三个加数的求和操作
+      // function add3(a,b,c){
+      // 	var sum1=a+b+c
+      // 	   // console.log(sum1);
+      // 	   //返回值
+      // 	   return sum1;
+      // }
+      // add3(1,3,4);
+      // var resultsum=add3(2,3,4)
+      // console.log('和是：'+resultsum)
+  //找出三个数中最大值
+function comp(a,b,c){
+  var max =a;
+   max= b>max?b:max;
+   max=c>max?c:max;
+   return max;
+
+          //    if(a>b){
+          //        console.log(a);
+          //          }
+          //   else if(c>b){
+          //        console.log(c);
+          //       }
+          //    else{
+          //       console.log(b);
+          //    }
+          // return comp;  
+         
+            
+        }
+        var d=comp(2,4,1)
+        var e=comp;
+        // comp(4,12,8);
+     console.log(d);
+console.log(e);
+
+	</script>
+</body>
+</html>

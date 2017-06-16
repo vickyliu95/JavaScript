@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡简单</title>
+<style>
+ *{
+	margin: 0;
+	padding: 0;
+   }
+#tab{
+	 list-style: none;
+	 overflow: hidden;
+    }
+#tab li{
+		float: left;
+		width: 80px;
+		height: 40px;
+		line-height: 40px;
+		cursor: pointer;
+		text-align: center;
+       }
+#container{
+	position: relative;
+}
+#content1,#content2,#content3{
+	width: 300px;
+	height: 100px;
+	padding: 30px;
+	position: absolute;
+  }
+  #tab1,#content1{
+  	background-color: #ffcc00;
+  }
+   #tab2,#content2{
+  	background-color: #ff00cc;
+  }
+   #tab3,#content3{
+  	background-color: #00ccff;
+  }
+</style>
+
+</head>
+<body>
+<!-- 勾结页面元素	 -->
+<ul id="tab">
+	<li  id="tab1" onclick="show(1)">10元套餐</li>
+	<li  id="tab2" onclick="show(2)">30元套餐</li>
+	<li  id="tab3" onclick="show(3)"> 50元套餐</li>
+</ul>
+<div id="container">
+	<div id="content1" style="z-index: 1;">10元套餐套餐套餐套餐套餐套餐套餐套餐dsfsagagdafgadg</div>
+	<div id="content2">30元套餐套餐套餐套餐套餐套餐套餐套餐套餐套餐套餐套餐套餐sdvvdfdgfdGAG</div>
+	<div id="content3">50元df套餐套餐套餐gdsg套餐套餐套餐套餐套餐套餐adgdg</div>
+</div>
+<!--<script type="text/javascript">
+   //通过class属性,
+   //现在通过style属性
+   function show(num){
+   //1.查找一下之前显示的div,它style设置为z-index:1
+	 var old = document.querySelector('div[style="z-index: 1;"]');
+	     old.style.removeProperty('z-index');
+	 //2.显示点击这个li的content
+	 var curr = document.getElementById('content'+num);
+	     curr.style.zIndex='1';
+   }
+</script>-->
+</body>
+</html>
