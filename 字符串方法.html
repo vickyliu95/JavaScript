@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+ var msg='hello 贵阳学院'
+console.log(msg)
+//charAt（）获取指定位置的字符
+console.log(msg.charAt(0));
+console.log(msg.charAt(6));//贵,下标从0开始
+//unicode
+//charCodeAt获取指定位置字符的unicode码
+	var msg1='CEO放'
+	console.log(msg1.charCodeAt(2));//79,
+	var msg2='ZengCTO'
+	console.log(msg2.charCodeAt(6));
+	//检索字符串
+	//indexOf只返回第一回出现字符的下标
+	var email='changjiang@lamco@sohu.com';
+	console.log(email.indexOf('lamco'));//11
+	console.log(email.indexOf('@'));//10
+	// console.log(email.lastIndexOf('@'))//16
+	console.log(email.indexOf('@',12))//16
+console.log(email.lastIndexOf('@',3))//-1,表示找不到
+console.log(email.indexOf('dengwei'))//-1表示找不到
+//截取子字符串
+  var mag3='abc一二三';
+  console.log(mag3.slice(0,3));
+  console.log(mag3.slice(3,6))
+  console.log(mag3.slice(3))//默认为起始坐标,沈略end
+  console.log(mag3.substring(3,5))//一样
+//分割字符串
+    var data1='Tom-Smith-Chuan';
+    var arr1=data1.split('-')
+    for(var i=0;i<arr1.length;i++){
+    	console.log(arr1[i])
+      }
+      //连接字符串
+      var string1='AA';
+      var string2='BB';
+      var string4='CC'
+      var string3=string1.concat(string2,string4)
+      console.log(string3)
+      var string5=string1+string2;
+</script>	
+</body>
+</html>
