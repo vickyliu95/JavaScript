@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+//定义正则表达式
+//1\普通字符a-z  A-Z 0-9
+var regexp1=/iphone/;
+var data='Apple iphone is No.1';
+console.log(regexp1.test(data))//ture
+//数字
+var regexp=/123/;
+console.log(regexp.test('456789123'))
+//2\需要使用的转义字符
+//. \ / * ? + () [] {} ^ $ |
+var regexp2=/\?/;
+console.log(regexp2.test('i am a teacher?'))//匹配是否出现指定符号
+//3\字符集
+//匹配字符串，abc中的任意两个字符
+var regexp3=/[abc]{2}/;//前面是普通字符，后面是量词
+console.log(regexp3.test('abd'))//ture
+//匹配字符串，匹配abc之外的任意两个字符
+  var regexp4=/[^abc]{2}/
+ console.log(regexp4.test('abc'))//false,匹配abc之外的字符
+ console.log(regexp4.test('ghijk'))//true
+ //匹配数字【0-9】，也可以加量词
+ var regexp5=/[0-5]/;
+ console.log(regexp5.test('abc'))//false
+ console.log(regexp5.test('789'))//ture
+ var regexp6=/\D/;
+  console.log(regexp6.test('123'));
+  console.log(regexp6.test('abc'));
+//[A-z]匹配任意大小写二十六字母
+//[5-0],错误的写法，不能写
+//字符集和{}量词搭配使用
+//4、预定义字符集
+//\d匹配0-9的数字；\D匹配非数字；\w匹配数字，字母，下划线；
+//\W匹配非数字、字母、下划线
+//\s匹配空白字符\n\r\t\v\f
+//\S匹配非空白字符
+
+//5、数量词
+//n?匹配0次或者1次
+////n*匹配0次或者多次（有就行）
+//n+匹配一次以上
+//n{}匹配{}里的次数
+//n{x,y}匹配出现x-y次
+//n(x,)匹配出现>=x次
+ var regexp7=/a?bbcc/;
+ console.log(regexp7.test('aaabbcc'))//true
+  console.log(regexp7.test('bbcc'))
+  console.log(regexp7.test('ddeeff'))//false
+
+//6、选择和分组
+ var regexp8=/ex|Ex/;
+    console.log(regexp8.test('extend'))
+     console.log(regexp8.test('Extend'))
+var regexp9=/test(\d+)///使用（）分组
+console.log(regexp9.test('now test001'))//
+console.log(regexp9.test('test001test'))
+//7、指定匹配位置
+//^匹配字符串的开头
+var regexp10=/^a/
+console.log(regexp9.test('bbcac'))
+//$匹配字符串结尾
+ //\b匹配单词边界
+ //\B匹配非边界
+ //？=x匹配其后面紧跟着的字符串
+ var regexp11=/do(?!not)/
+ console.log(regexp11.test('donot leave me'))//ture
+ // console.log(regexp11.test("don't leave me"))//false
+ //?！x匹配其后没有紧跟的字符串
+ console.log(regexp11.test("don't leave me"))//false
+</script>
+	
+</body>
+</html>
